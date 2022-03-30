@@ -6,7 +6,6 @@ import recordService from './services/record'
 
 recordService.getAll().then(response => {
   const people = response;
-  console.log(people, typeof(people), response);
   ReactDOM.render(
     <React.StrictMode>
       <App people={people} />
