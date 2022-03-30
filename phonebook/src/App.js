@@ -71,6 +71,12 @@ const App = ({people}) => {
         setTimeout(()=>{
           setErrorMessage(null)
         }, 3000)
+      }).catch(error => {
+        console.log(error.message);
+        setErrorMessage('name cannot be less than 3 characters long');
+        setTimeout(()=>{
+          setErrorMessage(null)
+        }, 3000)
       })
     }
   };
